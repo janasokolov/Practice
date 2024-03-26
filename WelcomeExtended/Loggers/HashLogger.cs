@@ -16,6 +16,7 @@ namespace WelcomeExtended.Loggers
         public HashLogger(string name)
         {
             _name = name;
+            
             _logMesssage = new ConcurrentDictionary<int, string>();
         }
 
@@ -37,6 +38,7 @@ namespace WelcomeExtended.Loggers
             //throw new NotImplementedException();
             
             var message = formatter(state, exception);
+            
             switch (logLevel)
             {
                 case LogLevel.Critical:

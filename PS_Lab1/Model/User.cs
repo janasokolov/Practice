@@ -13,14 +13,22 @@ namespace PS_Lab1.Model
         private string _password;
         private int _facNum;
         private string _email;
+        private int _id;
+        private DateTime _expires;
 
-        //public User(string names, string password, int facNum, string email, UserRolesEnum role)
+        //public User(string names, string password, int facNum, string email, UserRolesEnum role, int id, DateTime expires)
         //{
         //    _names = names;
         //    _password = password;
         //    _facNum = facNum;
         //    _email = email;
         //    Role = role;
+        //    _id = id;
+        //    _expires = expires;
+        //}
+
+        //public User()
+        //{
         //}
 
         public string Names { 
@@ -43,6 +51,19 @@ namespace PS_Lab1.Model
         {
             get { return _email; }
             set { _email = value; }
+        }
+
+        public virtual int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+
+        }
+        
+        public DateTime Expires
+        {
+            get { return _expires; }
+            set { _expires = value; }
         }
 
         public UserRolesEnum Role { get; set; }
